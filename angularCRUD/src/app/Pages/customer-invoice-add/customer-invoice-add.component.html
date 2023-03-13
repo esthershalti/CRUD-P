@@ -1,0 +1,21 @@
+<form class="emp-form" #customerInvoicesForm="ngForm" (ngSubmit)="onSubmit(customerInvoicesForm)">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <input class="forn-cntrol" name="InvId" #InvId="ngModel"  [(ngModel)]="customerInvSer.selectedCustomerInvoices.InvId" placeholder="Inv ID">
+        </div><br>
+        <div class="form-group col-md-6">
+            <input class="forn-cntrol" name="InvDate"  #InvDate="ngModel" [(ngModel)]="customerInvSer.selectedCustomerInvoices.InvDate" placeholder="Inv Date">
+        </div><br>
+        <div class="form-group col-md-6">
+            <input class="forn-cntrol" name="InvStatus" #InvStatus="ngModel"  [(ngModel)]="customerInvSer.selectedCustomerInvoices.InvStatus" placeholder="Inv Status">
+        </div><br>
+        <div class="form-group col-md-6">
+            <input type="number" class="forn-cntrol" name="InvAmount" #InvAmount="ngModel"  [(ngModel)]="customerInvSer.selectedCustomerInvoices.InvAmount" placeholder="Inv Amount">
+        </div><br>
+        <div class="form-group col-md-12">
+        <button  type="submit" class="btn btn-lg btn-block btn-info"><i class="fa fa-floppy-o"></i>Submit</button>   
+        <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(customerInvoicesForm)"><i class="fa fa-repeat "></i>Reset</button>   
+        </div>
+    </div>
+    </form>    
+    

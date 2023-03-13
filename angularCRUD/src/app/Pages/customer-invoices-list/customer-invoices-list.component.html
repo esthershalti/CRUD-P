@@ -1,0 +1,22 @@
+<button><a routerLink="/add-customerInv">Add Customer Invoice</a></button>
+<table class="table table-sm table-hover">
+    <tr *ngFor="let CustomerInvoices of customerInvoices">
+        <div class="form-group col-md-6">
+        <td>
+        Id: {{CustomerInvoices.InvId}}
+        ,Date: {{CustomerInvoices.InvDate}}
+        ,Status: {{CustomerInvoices.InvStatus}}
+        ,Amount: {{CustomerInvoices.InvAmount}}</td>
+        <td>
+            <a class="btn">
+                <i class="fa fa-pencil-square-o" (click)="showForEdit(CustomerInvoices)">edit</i>
+            </a>
+   
+            <a class="btn text-danger" (click)="onDel(CustomerInvoices.InvId)">
+                <i class="fa fa-trash-o">Del</i>
+              </a>
+        </td>
+    </div>
+    </tr>
+</table> 
+
